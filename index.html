@@ -134,55 +134,43 @@
     nav ul li ul li a:hover {
       background-color: #FFE0CC;
     }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+        background-size: cover;
+      }
+
+      nav {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+
+      nav ul li a {
+        padding: 10px;
+      }
+
+      .logo-izq, .logo-der {
+        height: 35px;
+        margin: 5px;
+      }
+
+      form input[type="search"] {
+        width: 90%;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+
 <center>
-<form method="get" action="https://www.google.com/seach" tanget="_blank">
-<input type="search" name="q" placeholder="Introducir busqueda" autofocus required>
-<input type="submit">
-</form>
-</center>
-
-  
-  <nav>
-    <img src="logo.png" alt="Logo Izquierdo" class="logo-izq">
-
-    <ul>
-      <li><a href="CIUDADANO.html">Ciudadano</a></li>
-
-      <li><a href="TRAMITE.html">Trámite</a>
-        <ul>
-          <li><a href="tramitess.html">Administrativos</a></li>
-          <li><a href="TR.html">Gestionar Trámite</a></li>
-        </ul>
-      </li>
-
-      <li><a href="SOLICITUD.html">Solicitud</a></li>
-
-      <li><a href="PAGO.html">Pago</a>
-        <ul>
-          <li><a href="SERVICIOS.html">Servicios y Derechos</a></li>
-          <li><a href="pago ciudadano.html">Pagos Ciudadanos</a></li>
-        </ul>
-      </li>
-
-
-      <li><a href="DOCUMENTO.html">Documento</a>
-        <ul>
-          <li><a href="GALERIA.html">Galería</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#">Visitantes</a>
-        <ul>
-          <li><a href="form1.html">Registrar</a></li>
-        </ul>
-      </li>
-    </ul>
-
-    <img src="signos.png" alt="Logo Derecho" class="logo-der">
-  </nav>
-</body>
-</html>
+<form method="get" action="https://www.google.com/search" target="_blank_
