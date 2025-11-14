@@ -13,164 +13,223 @@
       background-image: url('portada.jpg');
       background-size: cover;
       background-position: center;
-      height: 100vh;
-      background-color: #FFE0CC; /* color de respaldo */
+      min-height: 100vh;
+      background-color: #FFE0CC;
     }
 
-    /* --- BARRA DE BÚSQUEDA --- */
-    .search-bar {
-      background-color: rgba(255, 239, 230, 0.8);
-      backdrop-filter: blur(4px);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .search-bar input[type="text"] {
-      width: 300px;
-      padding: 10px 15px;
-      border: 2px solid #F8BBD0;
-      border-radius: 20px;
-      font-size: 14px;
-      outline: none;
-      transition: 0.3s;
-    }
-
-    .search-bar input[type="text"]:focus {
-      border-color: #E57373;
-      box-shadow: 0 0 5px rgba(229, 115, 115, 0.5);
-    }
-
-    .search-bar button {
-      margin-left: 10px;
-      padding: 10px 18px;
-      background-color: #F8BBD0;
-      border: none;
-      border-radius: 20px;
-      color: #2E3A59;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .search-bar button:hover {
-      background-color: #F48FB1;
-      color: white;
-    }
-
-    /* --- MENÚ PRINCIPAL --- */
+    /* --- MENÚ RESPONSIVE (Hamburguesa) --- */
     nav {
-      background-color: rgba(255, 224, 204, 0.9);
+      background-color: rgba(255, 224, 204, 0.95);
       backdrop-filter: blur(4px);
-      padding: 8px 0;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    /* --- LOGOS --- */
-    .logo-izq, .logo-der {
-      height: 45px;
-      width: auto;
-      margin: 0 20px;
-    }
-
-    /* --- LISTA DEL MENÚ --- */
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex: 1;
-    }
-
-    nav ul li {
+      padding: 10px;
       position: relative;
     }
 
-    nav ul li a {
-      display: block;
-      padding: 12px 20px;
-      color: #2E3A59;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 5px 10px;
       border-radius: 8px;
+      background: #F8BBD0;
+      color: #2E3A59;
+      width: fit-content;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      font-weight: bold;
+      color: #2E3A59;
+      border-radius: 8px;
+      transition: 0.3s;
     }
 
     nav ul li a:hover {
       background-color: #F8BBD0;
-      color: #1C3A5B;
     }
 
-    /* --- SUBMENÚ --- */
+    /* SUBMENÚ */
     nav ul li ul {
       display: none;
       position: absolute;
-      background: rgba(255,255,255,0.95);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      background: white;
       padding: 0;
-      top: 100%;
-      left: 0;
-      min-width: 180px;
-      z-index: 10;
+      margin: 0;
+      width: 180px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      z-index: 20;
     }
 
-    nav ul li:hover > ul {
+    nav ul li:hover ul {
       display: block;
     }
 
     nav ul li ul li a {
-      padding: 12px 15px;
       color: #333;
       font-weight: normal;
     }
 
-    nav ul li ul li a:hover {
-      background-color: #FFE0CC;
+    /* BARRA DE BÚSQUEDA */
+    form {
+      margin-top: 20px;
     }
 
-    /* --- RESPONSIVE --- */
-    @media (max-width: 600px) {
-      body {
-        padding: 10px;
-        background-size: cover;
-      }
+    form input[type="search"] {
+      width: 80%;
+      max-width: 350px;
+      padding: 12px;
+      border-radius: 20px;
+      border: 2px solid #F8BBD0;
+      font-size: 15px;
+      outline: none;
+    }
 
-      nav {
-        flex-direction: column;
-        padding: 10px;
-      }
+    form input[type="submit"] {
+      padding: 10px 15px;
+      margin-left: 10px;
+      border-radius: 20px;
+      border: none;
+      background-color: #F8BBD0;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
+    /* LOGOS */
+    .logo-izq, .logo-der {
+      width: 50px;
+    }
+
+    /* -------------------
+       RESPONSIVE TELÉFONO
+       ------------------- */
+    @media (max-width: 700px) {
+
+      /* Menú se vuelve vertical */
       nav ul {
+        display: none;
         flex-direction: column;
-        width: 100%;
-        align-items: center;
+        background-color: rgba(255, 224, 204, 0.97);
+        padding: 15px;
+        border-radius: 10px;
       }
 
-      nav ul li a {
-        padding: 10px;
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+        margin: 0 auto;
       }
 
       .logo-izq, .logo-der {
-        height: 35px;
-        margin: 5px;
+        width: 40px;
+        margin: 5px auto;
+        display: block;
       }
 
-      form input[type="search"] {
-        width: 90%;
+      nav ul li {
+        width: 100%;
+        text-align: center;
+      }
+
+      nav ul li ul {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: #FFF3E0;
+        border-radius: 10px;
+      }
+
+      nav ul li:hover ul {
+        display: none;
+      }
+
+      /* Submenú desplegable en móvil con clic */
+      nav ul li.active ul {
+        display: block;
       }
     }
-
   </style>
 </head>
 
 <body>
 
 <center>
-<form method="get" action="https://www.google.com/search" target="_blank_
+<form method="get" action="https://www.google.com/search" target="_blank">
+  <input type="search" name="q" placeholder="Introducir búsqueda" required>
+  <input type="submit" value="Buscar">
+</form>
+</center>
+
+<nav>
+
+  <img src="logo.png" class="logo-izq">
+
+  <div class="menu-btn" onclick="toggleMenu()">☰ Menú</div>
+
+  <ul id="menu">
+    <li><a href="CIUDADANO.html">Ciudadano</a></li>
+
+    <li onclick="toggleSub(this)">
+      <a>Trámite</a>
+      <ul>
+        <li><a href="tramitess.html">Administrativos</a></li>
+        <li><a href="TR.html">Gestionar Trámite</a></li>
+      </ul>
+    </li>
+
+    <li><a href="SOLICITUD.html">Solicitud</a></li>
+
+    <li onclick="toggleSub(this)">
+      <a>Pago</a>
+      <ul>
+        <li><a href="SERVICIOS.html">Servicios y Derechos</a></li>
+        <li><a href="pago ciudadano.html">Pagos Ciudadanos</a></li>
+      </ul>
+    </li>
+
+    <li onclick="toggleSub(this)">
+      <a>Documento</a>
+      <ul>
+        <li><a href="GALERIA.html">Galería</a></li>
+      </ul>
+    </li>
+
+    <li onclick="toggleSub(this)">
+      <a>Visitantes</a>
+      <ul>
+        <li><a href="form1.html">Registrar</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <img src="signos.png" class="logo-der">
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
+
+  function toggleSub(item) {
+    item.classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
+
