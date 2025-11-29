@@ -9,23 +9,23 @@
   body {
     margin: 0;
     font-family: "Poppins", Arial, sans-serif;
-    background-image: url('fondo.jpg'); /* Aquí puedes poner tu imagen de fondo */
+    background-image: url('fondo.jpg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
   }
 
-  /* --- MENÚ FLOTANTE --- */
+  /* --- MENÚ PRINCIPAL --- */
   nav {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 236, 223, 0.85); /* Durazno claro con transparencia */
+    position: relative;
+    margin: 30px auto;
+    background-color: rgba(255, 236, 223, 0.9); /* Durazno claro */
     backdrop-filter: blur(6px);
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    padding: 10px 25px;
+    padding: 20px 25px;
+    width: 80%;
+    max-width: 600px;
   }
 
   nav ul {
@@ -33,9 +33,8 @@
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   nav ul li {
@@ -44,46 +43,33 @@
 
   nav ul li a {
     display: block;
-    padding: 12px 18px;
+    text-align: center;
+    padding: 14px 18px;
     color: #1C3A5B; /* Azul elegante */
     font-weight: bold;
     text-decoration: none;
     border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
     transition: all 0.3s ease;
   }
 
   nav ul li a:hover {
     background-color: #F8BBD0; /* Rosa pastel */
     color: #1C3A5B;
+    transform: scale(1.03);
   }
 
-  /* --- SUBMENÚ --- */
-  nav ul li ul {
-    display: none;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-radius: 12px;
-    padding: 0;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    z-index: 10;
-  }
+  /* --- RESPONSIVO --- */
+  @media (max-width: 768px) {
+    nav {
+      width: 90%;
+      padding: 15px;
+    }
 
-  nav ul li ul li a {
-    padding: 10px 15px;
-    color: #333;
-    font-weight: normal;
-    border-radius: 0;
-  }
-
-  nav ul li ul li a:hover {
-    background-color: #FFE0CC;
-  }
-
-  nav ul li:hover > ul {
-    display: block;
+    nav ul li a {
+      font-size: 16px;
+      padding: 12px;
+    }
   }
 </style>
 </head>
@@ -91,46 +77,15 @@
 <body>
   <nav>
     <ul>
-     <li><a href="http://predial.valledebravo.gob.mx/Default.aspx">Pago de Pedrial</a></li>
-        <ul>
-        </ul>
-      </li>
-
+      <li><a href="http://predial.valledebravo.gob.mx/Default.aspx">Pago de Predial</a></li>
       <li><a href="http://odapasvalledebravo.dyndns.org/Default.aspx">Pago de Agua Potable</a></li>
-      <ul>
-      </ul>
-
       <li><a href="https://app.cfe.mx/Aplicaciones/CCFE/MiEspacio/Login.aspx">Pago de Luz</a></li>
-        <ul>
-        </ul>
-      </li>
-
-      <li><a href="https://telmex.com/web/guest/pago_sin_login">Pago de Telefono/Internet</a></li>
-        <ul>
-        </ul>
-      </li>
-
-      <li><a href="https://data.finanzas.cdmx.gob.mx/sma/consulta_sedema">Pago de Multas de Transito</a></li>
-        <ul>
-        </ul>
-      </li>
-      
-       <li><a href="https://tenencia.edomex.gob.mx/TenenciaIndividual/tenencia/A06E1A88B8A6ED4B#/">Pago de Tenencia/Refrendo Vehicular</a></li>
-        <ul>
-        </ul>
-      </li>
-
-       <li><a href="https://share.google/xf8e4fKcFUgO9Znsu">Pago de Pasaporte</a></li>
-        <ul>
-        </ul>
-      </li>
-
-       <li><a href="https://data.finanzas.cdmx.gob.mx/sma/consulta_sedemayo">Pago de Licencia de Conducir</a></li>
-        <ul>
-        </ul>
-      </li>
-      
-
+      <li><a href="https://telmex.com/web/guest/pago_sin_login">Pago de Teléfono / Internet</a></li>
+      <li><a href="https://data.finanzas.cdmx.gob.mx/sma/consulta_sedema">Pago de Multas de Tránsito</a></li>
+      <li><a href="https://tenencia.edomex.gob.mx/TenenciaIndividual/tenencia/A06E1A88B8A6ED4B#/">Pago de Tenencia / Refrendo Vehicular</a></li>
+      <li><a href="https://share.google/xf8e4fKcFUgO9Znsu">Pago de Pasaporte</a></li>
+      <li><a href="https://data.finanzas.cdmx.gob.mx/sma/consulta_sedemayo">Pago de Licencia de Conducir</a></li>
+    </ul>
   </nav>
 </body>
 </html>
