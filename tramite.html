@@ -66,6 +66,28 @@
             font-size: 16px;
         }
 
+        /* --- VIDEO RESPONSIVO --- */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(160, 102, 201, 0.25);
+            margin-top: 30px;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 36px;
@@ -99,11 +121,12 @@
             <p><strong>Importancia:</strong> Los trámites permiten mantener actualizada la documentación personal y acceder a servicios que garantizan derechos y obligaciones.</p>
         </section>
 
-        <center>
-            <video width="700" height="400" controls>
+        <div class="video-container">
+            <video controls>
                 <source src="ttt.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
             </video>
-        </center>
+        </div>
     </div>
 </body>
 </html>
