@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Digital Ciudadana</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-image: url('fondo.jpg'); /* Aquí puedes poner tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  /* --- MENÚ FLOTANTE --- */
+  nav {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 236, 223, 0.85); /* Durazno claro con transparencia */
+    backdrop-filter: blur(6px);
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 10px 25px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 18px;
+    color: #1C3A5B; /* Azul elegante */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #F8BBD0; /* Rosa pastel */
+    color: #1C3A5B;
+  }
+
+  /* --- SUBMENÚ --- */
+  nav ul li ul {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    z-index: 10;
+  }
+
+  nav ul li ul li a {
+    padding: 10px 15px;
+    color: #333;
+    font-weight: normal;
+    border-radius: 0;
+  }
+
+  nav ul li ul li a:hover {
+    background-color: #FFE0CC;
+  }
+
+  nav ul li:hover > ul {
+    display: block;
+  }
+</style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+     <li><a href="http://predial.valledebravo.gob.mx/Default.aspx">Pago de Pedrial</a></li>
+        <ul>
+        </ul>
+      </li>
+
+      <li><a href="http://odapasvalledebravo.dyndns.org/Default.aspx">Pago de Agua Potable</a></li>
+      <ul>
+      </ul>
+
+      <li><a href="https://app.cfe.mx/Aplicaciones/CCFE/MiEspacio/Login.aspx">Pago de Luz</a></li>
+        <ul>
+        </ul>
+      </li>
+
+      <li><a href="https://telmex.com/web/guest/pago_sin_login">Pago de Telefono/Internet</a></li>
+        <ul>
+        </ul>
+      </li>
+
+      <li><a href="https://data.finanzas.cdmx.gob.mx/sma/consulta_sedema">Pago de Multas de Transito</a></li>
+        <ul>
+        </ul>
+      </li>
+      
+       <li><a href="https://tenencia.edomex.gob.mx/TenenciaIndividual/tenencia/A06E1A88B8A6ED4B#/">Pago de Tenencia/Refrendo Vehicular</a></li>
+        <ul>
+        </ul>
+      </li>
+
+       <li><a href="https://share.google/xf8e4fKcFUgO9Znsu">Pago de Pasaporte</a></li>
+        <ul>
+        </ul>
+      </li>
+
+       <li><a href="https://data.finanzas.cdmx.gob.mx/sma/consulta_sedemayo">Pago de Licencia de Conducir</a></li>
+        <ul>
+        </ul>
+      </li>
+      
+
+  </nav>
+</body>
+</html>

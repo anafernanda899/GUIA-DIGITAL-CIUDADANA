@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Digital Ciudadana</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-image: url('pn.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  /* --- MENÚ FLOTANTE --- */
+  nav {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 236, 223, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    padding: 10px 25px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 18px;
+    color: #1C3A5B;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #F8BBD0;
+    color: #1C3A5B;
+  }
+
+  /* --- SUBMENÚ --- */
+  nav ul li ul {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    z-index: 10;
+  }
+
+  nav ul li ul li a {
+    padding: 10px 15px;
+    color: #333;
+    font-weight: normal;
+    border-radius: 0;
+  }
+
+  nav ul li ul li a:hover {
+    background-color: #FFE0CC;
+  }
+
+  nav ul li:hover > ul {
+    display: block;
+  }
+</style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="https://gobmx.page/ActaNacimiento/">ACTA</a>
+        <ul>
+          <li><a href="actaa.html">Definición</a></li>
+          <li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">Buscar por Folio</a></li>
+        </ul>
+      </li>
+
+      <li><a href="https://www.gob.mx/curp/">CURP</a>
+        <ul>
+          <li><a href="curp.html">Definición</a></li>
+        </ul>
+      </li>
+
+      <li><a href="https://share.google/7ZWnSaU9mCdwy5HCt">LICENCIAS</a>
+        <ul>
+          <li><a href="licencia.html">Definición</a></li>
+          <li><a href="https://smovilidad.edomex.gob.mx/citas_internet">Agendar Cita</a></li>
+        </ul>
+      </li>
+
+      <li><a href="https://share.google/D3IEMuwBrTL2FHDaa">SAT</a>
+         <ul>
+          <li><a href="sat.html">Definición</a></li>
+       
+
+          <li><a href="https://citas.sat.gob.mx/">Agendar Cita</a></li>
+          <li><a href="https://share.google/kg2M34giuzqjyeFCn">RFC</a></li>
+          <li><a href="https://wwwmat.sat.gob.mx/aplicacion/53027/genera-tu-constancia-de-situacion-fiscal">Constancia de Situación Fiscal</a></li>
+          <li><a href="https://share.google/cjTLGDloj8WC7sskx">Declaración Personas Físicas</a></li>
+        </ul>
+      </li>
+
+      <li><a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a>
+      <ul>
+        <li><a href="siv.html">Definición</a></li>
+
+</ul>
+      <li><a href="https://share.google/xf8e4fKcFUgO9Znsu">PASAPORTE</a>
+        <ul>
+      <li><a href="pasa.html">Definicion</a></li>
+
+    </ul>
+  </nav>
+</body>
+</html>
