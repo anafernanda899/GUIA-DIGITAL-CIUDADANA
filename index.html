@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guía Digital Ciudadana</title>
-  <script src="FA.js"></script>
 
   <style>
     body {
@@ -17,74 +16,80 @@
       background-color: #FFE0CC;
     }
 
-    /* --- MENÚ RESPONSIVE (Hamburguesa) --- */
+    /* --- CONTENEDOR DEL MENÚ --- */
     nav {
-      background-color: rgba(255, 224, 204, 0.95);
-      backdrop-filter: blur(4px);
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      padding: 10px;
       position: relative;
-    }
-
-    .menu-btn {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-      padding: 5px 10px;
-      border-radius: 8px;
-      background: #F8BBD0;
-      color: #2E3A59;
-      width: fit-content;
+      margin: 30px auto;
+      background-color: rgba(255, 236, 223, 0.9);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 20px 25px;
+      width: 85%;
+      max-width: 700px;
     }
 
     nav ul {
       list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       gap: 10px;
+      align-items: stretch;
+    }
+
+    nav ul li {
+      position: relative;
     }
 
     nav ul li a {
-      text-decoration: none;
-      padding: 10px 15px;
       display: block;
-      font-weight: bold;
+      text-align: center;
+      padding: 14px 18px;
       color: #2E3A59;
-      border-radius: 8px;
-      transition: 0.3s;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      background-color: rgba(255, 255, 255, 0.85);
+      transition: all 0.3s ease;
     }
 
     nav ul li a:hover {
       background-color: #F8BBD0;
+      transform: scale(1.03);
     }
 
-    /* SUBMENÚ */
+    /* --- SUBMENÚS (si existen) --- */
     nav ul li ul {
-      display: none;
-      position: absolute;
-      background: white;
-      padding: 0;
-      margin: 0;
-      width: 180px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      border-radius: 8px;
-      z-index: 20;
-    }
-
-    nav ul li:hover ul {
       display: block;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 10px;
+      margin-top: 6px;
     }
 
     nav ul li ul li a {
-      color: #333;
+      background-color: rgba(255, 255, 255, 0.7);
       font-weight: normal;
+      margin: 5px 0;
     }
 
-    /* BARRA DE BÚSQUEDA */
+    nav ul li ul li a:hover {
+      background-color: #FFE0CC;
+    }
+
+    /* --- LOGOS --- */
+    .logo-izq, .logo-der {
+      display: block;
+      width: 60px;
+      margin: 0 auto 10px auto;
+    }
+
+    /* --- BARRA DE BÚSQUEDA --- */
     form {
-      margin-top: 20px;
+      text-align: center;
+      margin: 20px auto;
     }
 
     form input[type="search"] {
@@ -105,62 +110,23 @@
       background-color: #F8BBD0;
       font-weight: bold;
       cursor: pointer;
+      color: #2E3A59;
     }
 
-    /* LOGOS */
-    .logo-izq, .logo-der {
-      width: 50px;
-    }
-
-    /* -------------------
-       RESPONSIVE TELÉFONO
-       ------------------- */
+    /* --- RESPONSIVO (TELÉFONO) --- */
     @media (max-width: 700px) {
-
-      /* Menú se vuelve vertical */
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 224, 204, 0.97);
+      nav {
+        width: 90%;
         padding: 15px;
-        border-radius: 10px;
       }
 
-      nav ul.show {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-        margin: 0 auto;
+      nav ul li a {
+        font-size: 16px;
+        padding: 12px;
       }
 
       .logo-izq, .logo-der {
-        width: 40px;
-        margin: 5px auto;
-        display: block;
-      }
-
-      nav ul li {
-        width: 100%;
-        text-align: center;
-      }
-
-      nav ul li ul {
-        position: static;
-        width: 100%;
-        box-shadow: none;
-        background: #FFF3E0;
-        border-radius: 10px;
-      }
-
-      nav ul li:hover ul {
-        display: none;
-      }
-
-      /* Submenú desplegable en móvil con clic */
-      nav ul li.active ul {
-        display: block;
+        width: 45px;
       }
     }
   </style>
@@ -168,68 +134,52 @@
 
 <body>
 
-<center>
-<form method="get" action="https://www.google.com/search" target="_blank">
-  <input type="search" name="q" placeholder="Introducir búsqueda" required>
-  <input type="submit" value="Buscar">
-</form>
-</center>
+  <!-- Barra de búsqueda -->
+  <form method="get" action="https://www.google.com/search" target="_blank">
+    <input type="search" name="q" placeholder="Introducir búsqueda" required>
+    <input type="submit" value="Buscar">
+  </form>
 
-<nav>
+  <!-- Menú -->
+  <nav>
+    <img src="logo.png" class="logo-izq">
 
-  <img src="logo.png" class="logo-izq">
+    <ul>
+      <li><a href="CIUDADANO.html">Ciudadano</a></li>
 
-  <div class="menu-btn" onclick="toggleMenu()">☰ Menú</div>
+      <li>
+        <a href="tramite.html">Trámite</a>
+        <ul>
+          <li><a href="tramitess.html">Administrativos</a></li>
+          <li><a href="TR.html">Gestionar Trámite</a></li>
+        </ul>
+      </li>
 
-  <ul id="menu">
-    <li><a href="CIUDADANO.html">Ciudadano</a></li>
+      <li><a href="SOLICITUD.html">Solicitud</a></li>
 
-    <li onclick="toggleSub(this)">
-      <a href="tramite.html">Tramite</a>
-      <ul>
-        <li><a href="tramitess.html">Administrativos</a></li>
-        <li><a href="TR.html">Gestionar Trámite</a></li>
-      </ul>
-    </li>
+      <li>
+        <a href="pago.html">Pago</a>
+        <ul>
+          <li><a href="SERVICIOS.html">Servicios y Derechos</a></li>
+          <li><a href="pago ciudadano.html">Pagos Ciudadanos</a></li>
+        </ul>
+      </li>
 
-    <li><a href="SOLICITUD.html">Solicitud</a></li>
+      <li>
+        <a href="docc.html">Documento</a>
+        <ul>
+          <li><a href="GALERIA.html">Galería</a></li>
+        </ul>
+      </li>
 
-    <li onclick="toggleSub(this)">
-      <a href="pago.html">Pago</a>
-      <ul>
-        <li><a href="SERVICIOS.html">Servicios y Derechos</a></li>
-        <li><a href="pago ciudadano.html">Pagos Ciudadanos</a></li>
-      </ul>
-    </li>
+      <li>
+        <a href="form1.html">Visitantes</a>
+      </li>
+    </ul>
 
-  <li onclick="toggleSub(this)">
-
-      <a href="docc.html">Documento</a>
-      <ul>
-        <li><a href="GALERIA.html">Galería</a></li>
-      </ul>
-    </li>
-
-    <li onclick="toggleSub(this)">
-      <a>Visitantes</a>
-      <ul>
-        <li><a href="form1.html">Registrar</a></li>
-      </ul>
-    </li>
-  </ul>
-
-  <img src="sig.png" class="logo-der">
-</nav>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("show");
-  }
-
-  function toggleSub(item) {
-    item.classList.toggle("active");
-  }
-</script>
+    <img src="sig.png" class="logo-der">
+  </nav>
 
 </body>
 </html>
+
