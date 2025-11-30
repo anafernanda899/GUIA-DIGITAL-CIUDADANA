@@ -59,6 +59,39 @@
             color: #6d3c8d;
         }
 
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        ul li strong {
+            color: #6d3c8d;
+        }
+
+        /* --- VIDEO RESPONSIVO --- */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(160, 102, 201, 0.25);
+            margin-top: 30px;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -72,7 +105,7 @@
                 font-size: 36px;
             }
 
-            p {
+            p, ul {
                 font-size: 16px;
             }
         }
@@ -82,48 +115,41 @@
     <div class="container">
         <h1>CURP</h1>
 
-        <img src="ff.jpeg" alt="Ciudadanía">
+        <img src="curp.JPG" alt="Ejemplo de CURP">
 
         <section>
-            
-            <p> <strong>¿Qué es la CURP?</strong></p>
+            <p><strong>¿Qué es la CURP?</strong></p>
 
-            <p>La<strong> CURP (Clave Única de Registro de Población)</strong>es un código alfanumérico único que identifica a todas las personas que viven en México y también a los mexicanos que residen en el extranjero.
-            Sirve para registrar oficialmente a cada ciudadano en bases de datos del gobierno.</p>
+            <p>La <strong>CURP (Clave Única de Registro de Población)</strong> es un código alfanumérico único que identifica a todas las personas que viven en México y también a los mexicanos que residen en el extranjero. Sirve para registrar oficialmente a cada ciudadano en bases de datos del gobierno.</p>
 
-            <p><strong>Importancia de la acta de nacimiento</strong></p>
+            <p><strong>Importancia del acta de nacimiento</strong></p>
             <ul>
-            <li><strong>Identificacion:</strong> Es fundamental para octener otros documentos de entidad como el pasaporte, la celuda de identidad o la licencia de conducion</li>
-            <li><strong>Derechos:</strong> Sirve como prueba de ciudadania y es esencial para hacender a derechos y servicos como la eduacion y la atencion medica.</li>
-           </ul> 
-            
-            <p><strong>¿Para qué sirve la CURP</strong></p>
+                <li><strong>Identificación:</strong> Es fundamental para obtener otros documentos de identidad como el pasaporte, la cédula o la licencia de conducir.</li>
+                <li><strong>Derechos:</strong> Sirve como prueba de ciudadanía y es esencial para acceder a derechos y servicios como la educación y la atención médica.</li>
+            </ul>
 
+            <p><strong>¿Para qué sirve la CURP?</strong></p>
             <ul>
-               <li>Inscripciones escolares.</li>
-               <li>Trámites ante el <strong>INE, SAT, IMSS, ISSSTE, etc.</strong></li>
-               <li>Solicitar pasaporte, licencia o acta de nacimiento.</li>
-             <li>Registro en programas sociales o becas.</li>
-             <li>Contrataciones laborales y servicios bancarios.</li>
-</ul>
+                <li>Inscripciones escolares.</li>
+                <li>Trámites ante el <strong>INE, SAT, IMSS, ISSSTE, etc.</strong></li>
+                <li>Solicitar pasaporte, licencia o acta de nacimiento.</li>
+                <li>Registro en programas sociales o becas.</li>
+                <li>Contrataciones laborales y servicios bancarios.</li>
+            </ul>
 
             <p><strong>¿Cuándo se obtiene?</strong></p>
             <ul>
                 <li>Los <strong>mexicanos nacidos en el país</strong> la reciben al registrar su <strong>acta de nacimiento.</strong></li>
-                    <li>Los<strong> mexicanos nacidos en el extranjero</strong> pueden tramitarla en los consulados.</li> 
-                     <li> <li>Contrataciones laborales y servicios bancarios.</li>.
-                 </li>
-</ul>
-                   </ul> 
-                   <video width="560" height="315" controls>
-  <source src="cu.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de videos.
-</video>
+                <li>Los <strong>mexicanos nacidos en el extranjero</strong> pueden tramitarla en los consulados.</li>
+            </ul>
 
-            </section>
-
-
+            <div class="video-container">
+                <video controls>
+                    <source src="cu.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </section>
     </div>
 </body>
-
 </html>
