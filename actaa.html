@@ -71,6 +71,28 @@
             font-size: 16px;
         }
 
+        /* --- VIDEO RESPONSIVO --- */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(160, 102, 201, 0.25);
+            margin-top: 30px;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 36px;
@@ -85,10 +107,9 @@
     <div class="container">
         <h1>ACTA DE NACIMIENTO</h1>
 
-        <img src="al.jpg" alt="Ejemplo de CURP">
+        <img src="acta.JPG" alt="Ejemplo de Acta de Nacimiento">
 
         <section>
-            
             <p><strong>Importancia del acta de nacimiento</strong></p>
             <ul>
                 <li><strong>Identificación:</strong> Es fundamental para obtener otros documentos de identidad como el pasaporte, la cédula o la licencia de conducir.</li>
@@ -103,17 +124,13 @@
                 <li>En el caso de <strong>mexicanos nacidos en el extranjero</strong>, el acta puede tramitarse en los consulados mexicanos.</li>
             </ul>
 
-            
-
-<video width="560" height="315" controls>
-  <source src="ac.mp4" type="video/mp4">
-  Tu navegador no soporta la reproducción de videos.
-</video>
+            <div class="video-container">
+                <video controls>
+                    <source src="ac.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
         </section>
-
-        
     </div>
 </body>
-
 </html>
-
