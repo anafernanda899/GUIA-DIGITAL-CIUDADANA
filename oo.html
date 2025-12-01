@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lugares para hacer pagos — Valle de Bravo</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      background: #0f66a8;
+      color: white;
+      padding: 16px;
+      text-align: center;
+    }
+    main {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 16px;
+      padding: 16px;
+      justify-content: center;
+    }
+    aside, section {
+      background: #f7f9fb;
+      border: 1px solid #e1e6ea;
+      border-radius: 8px;
+      padding: 12px;
+      overflow-y: auto;
+    }
+    aside {
+      flex: 0 1 360px;
+      max-width: 360px;
+    }
+    section {
+      flex: 0 1 500px;
+      max-width: 500px;
+    }
+    #map {
+      flex: 1 1 400px;
+      min-height: 520px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .place {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    .place h3 { margin: 0 0 6px 0; font-size: 1rem;}
+    .place p { margin: 4px 0; font-size: 0.95rem; color: #333; }
+    .btn {
+      display: inline-block;
+      padding: 8px 10px;
+      background: #0f66a8;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    footer {
+      padding: 12px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      background: #fff;
+      border-top: 1px solid #eee;
+    }
+    @media (max-width: 900px){
+      main { flex-direction: column; }
+      aside, section, #map { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lugares para hacer pagos ciudadanos — Valle de Bravo</h1>
+    <div>Predial, agua, luz (CFE), control vehicular y servicios municipales</div>
+  </header>
+
+  <main>
+    <!-- Columna izquierda -->
+    <aside>
+      <div class="place">
+        <h3>Licencias de Valle de Bravo Secretaria de Transporte</h3>
+        <p><strong>Dirección:</strong> Blvrd Juan Herrera y Piña Manzana 015 101-A, El Calvario, 51200 Valle de Bravo, Méx.</p>
+        <p><strong>Horario:</strong> Lunes a Viernes (9:00am - 6:00pm).</p>
+        <p><strong>Teléfono:</strong> 726 262 7461</p>
+        <p><a class="btn" target="_blank" href="#">Abrir en Google Maps</a></p>
+        <img src="ii.png" width="300" height="200">
+      </div>
+
+       <div class="place" id="odapas">
+        <h3>ODAPAS / Pago de agua</h3>
+        <p><strong>Dirección / Atención:</strong> Tesorería Municipal - Boulevard Juan Herrera y Piña (consulta oficinas del ODAPAS para atención y pago).</p>
+        <p><strong>Horario:</strong> Lunes a Viernes (consulta antes de ir).</p>
+        <p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=ODAPAS+Valle+de+Bravo">Abrir en Google Maps</a></p>
+        <img src="p.jpg" width="300" height="200">
+      </div>
+       <div class="place" id="bancos">
+        <h3>OXXO</h3>
+        <p><strong>Pagos: </strong>Transferencias, Recargas, Pagos de pedidos.</p>
+        <p><strong>Dirreccion: </strong>Av. Benito Juárez No. 108 Valle de Bravo, 51200.</p>
+        <p><a class="btn" target="_blank" href="https://www.bing.com/maps/search?name=Telmex&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&q=Oxxo%2C+Benito+Juarez+108%2C+51200+Valle+de+Bravo%2C+Mex%2C+M%C3%A9xico&srs=sbs&ss=id.local_ypid%3A%22YN9001x3197123061798073167%22&st=Oxxo&sfa=Benito+Juarez+108%2C+51200+Valle+de+Bravo%2C+Mex%2C+M%C3%A9xico&cp=19.195753%7E-100.132492&lvl=16">Abrir en Google Maps</a></p>
+        <img src="j.jpg" width="300" height="200">
+      </div>
+
+    </aside>
+
+    <!-- NUEVA columna central -->
+    <section>
+       <div class="place" id="centro-fiscal">
+        <h3>Centro de Servicios Telmex</h3>
+        <p><strong>Dirección:</strong> 16 de Septiembre 204 Centro, 51200 México, Mexico.</p>
+        <p><strong>Servicios:</strong> Pago de internet y telefonia telmex.</p>
+        <p><strong>Tel:</strong> 800 123 2222</p>
+        <p><a class="btn" target="blank" href="https://www.bing.com/maps/search?name=Telmex&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&q=Telmex&ss=id.ypid%3AYN9001x7315881&ppois=19.195405960083008-100.13107299804688_Telmex&cp=19.195406%7E-100.131073&lvl=16">Abrir en Google Maps</a></p>
+        <img src="o.jpg" width="300" height="200">
+</div>
+<div class="place" id="cfe">
+        <h3>Oficina / módulo CFE — Valle de Bravo</h3>
+        <p><strong>Dirección aproximada:</strong> Calle Ameyal, Barrio Santa María Ahuacatlán, Valle de Bravo (oficina CFE local).</p>
+        <p><strong>Servicios:</strong> Pago de recibos de luz, reportes y atención.</p>
+        <p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=CFE+Valle+de+Bravo+Calle+Ameyal">Abrir en Google Maps</a></p>
+         <img src="y.jpg" width="300" height="200">
+      </div>
+
+       <div class="place" id="bancos">
+        <h3>Tienda Soriana</h3>
+        <p><strong>Servicios:</strong> Resibo de agua, Electricidad, Telefono fijo o movil, Gas</p>
+        <p><strong>Direccion:</strong> Avenida Benito Juarez 120, San Antonio, Barranca Seca, 51200 Valle de Bravo, Méx</p>
+        <p><a class="btn" target="_blank" href="https://share.google/oQRSjYsIE0r3XVemL">Abrir en Google Maps</a></p>
+        <img src="q.jpg" width="300" height="200">
+      </div>
+    </section>
+
+    <!-- Columna derecha opcional  -->
+     <section>
+       <div class="place" id="bancos">
+        <h3>Sucursales bancarias y cajeros (apoyo para pagos electrónicos)</h3>
+        <p>Banamex, HSBC, Banorte y otros bancos con sucursal o cajeros en el centro pueden servir para pagos o retiros.</p>
+        <p><strong>Ejemplo:</strong> Plaza De La Independencia S/N, Avandaro, 51200 Valle de Bravo, Méx.</p>
+        <p><a class="btn" target="_blank" href="https://www.google.com.mx/maps/place/Sucursal+Banamex+Valle+De+Bravo,+Edo+Mex/@19.161026,-100.1350566,17z/data=!4m10!1m2!2m1!1sBanamex+cerca+de+Valle+de+Bravo,+Estado+de+M%C3%A9xico!3m6!1s0x85cd6387464ee903:0xf61084ff906f5edb!8m2!3d19.161026!4d-100.130293!15sCjJCYW5hbWV4IGNlcmNhIGRlIFZhbGxlIGRlIEJyYXZvLCBFc3RhZG8gZGUgTcOpeGljbyIDiAEBkgEEYmFua-ABAA!16s%2Fg%2F11b6j4d701?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D">Abrir en Google Maps</a></p>
+        <img src="c.jpg" width="300" height="200">
+      </div>
+      <div class="place" id="bancos">
+        <h3>Banco Azteca</h3>
+        <p><strong>Pagos: </strong>Transferencias, Agua, Luz, Telefono.</p>
+        <p><strong>Dirreccion: </strong>Avenida Benito Juarez Garcia 486, 51200 Valle De Bravo.</p>
+        <p><strong>Horario:</strong> Lunes a Domingo (9:00am– 9:00pm).</p>
+        <p><a class="btn" target="_blank" href="https://www.bing.com/maps/search?name=Telmex&trfc=&mepi=0%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&q=Banco+Azteca%2C+Avenida+Benito+Juarez+Garcia+486%2C+51200+Valle+de+Bravo%2C+Campeche%2C+M%C3%A9xico&srs=sbs&ss=id.local_ypid%3A%22YN9001x11727925254521745538%22&st=Banco+Azteca&sfa=Avenida+Benito+Juarez+Garcia+486%2C+51200+Valle+de+Bravo%2C+Campeche%2C+M%C3%A9xico&cp=19.195091%7E-100.132515&lvl=16">Abrir en Google Maps</a></p>
+        <img src="u.jpg" width="300" height="200">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Verifica horarios y documentos antes de asistir. Opciones de pago en línea disponibles.</small>
+  </footer>
+</body>
+</html>
